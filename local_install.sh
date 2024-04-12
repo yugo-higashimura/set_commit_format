@@ -21,7 +21,7 @@ if [ -e $template_path ]; then
 fi
 
 ## config の確認
-if [ -e $(git config commit.template $template_path) ]; then
+if [ -e $(git config commit.template) ]; then
     echo "commit template exists."
     exit 1
 fi
@@ -56,3 +56,5 @@ if [[ \${current_branch_name} =~ ([0-9]+) ]]; then
 fi
 
 EOF
+
+echo "local install done."
